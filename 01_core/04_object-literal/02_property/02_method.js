@@ -5,9 +5,11 @@
 */
 
 var dog = {
-    name : '뽀삐',
+    name : '호두',
+    // 메소드 = 객체에 묶여 있는 함수
     eat : function(food) {
-        console.log(`${this.name}(은)는 ${food}를 맛있게 먹어요~~`)
+        console.log(`${this.name}(은)는 ${food}를 맛있게 먹어요~~`)   // this는 현재 인스턴스인 dog를 가리킴.
     }
 };
 
+dog.eat('고구마');
