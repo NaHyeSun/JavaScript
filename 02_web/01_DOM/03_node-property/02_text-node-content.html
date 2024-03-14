@@ -22,6 +22,18 @@
 
     <div id="area">nodeValue</div>
     
+    <script>
+        console.log(document.nodeValue);      //null
+
+        const $area = document.getElementById('area');
+        console.log($area.nodeValue);         //null
+
+        const $textNode = $area.firstChild;
+        console.log($textNode.nodeValue);     //nodeValue
+
+        $textNode.nodeValue = '텍스트 값 변경!'
+
+    </script>
 
     <h3>textContent</h3>
     <pre>
@@ -38,5 +50,17 @@
     
     <div id="area2">textContent<span>내부 span</span></div>
    
+    <script>
+        const $area2 = document.getElementById('area2');
+
+        console.log($area2.textContent);             //textContent내부 span
+
+        console.log($area2.nodeValue);               //null
+        console.log($area2.firstChild.nodeValue);    //textContent
+        console.log($area2.lastChild.firstChild.nodeValue);   //내부 span
+
+        $area2.textContent = "텍스트 값 변경!<span>span 태그 작성 </span>"
+
+    </script>
 </body>
 </html>

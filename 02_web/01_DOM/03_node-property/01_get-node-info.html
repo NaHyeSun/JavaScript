@@ -21,6 +21,18 @@
 
     <div id="area">노드 정보 취득</div>
 
+    <script>
+        console.log(document.nodeType);       //9
+        console.log(document.nodeName);       //#document
+
+        const $area = document.getElementById('area');
+        console.log($area.nodeType);          //1
+        console.log($area.nodeName);          //div
+
+        const $textNode = $area.firstChild;
+        console.log($textNode.nodeType);      //3
+        console.log($textNode.nodeName);      //#text
+    </script>
    
 </body>
 </html>

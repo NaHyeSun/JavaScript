@@ -17,6 +17,21 @@
 
     <div id="area">태그 엘리먼트의 값을 읽거나, 변경할 때 <span>innerHTML</span>속성을 사용함</div>
    
+    <script>
+        const $area = document.getElementById('area');
+
+        console.log($area.innerHTML);
+
+        //노드 추가
+        $area.innerHTML += '값 추가!!!';
+
+        //노드 교체
+        $area.innerHTML = '<h1>innerHTML</h1>속성으로 값 변경!!';
+
+        //노드 삭제
+        area.innerHTML = '';
+
+    </script>
 
     <pre>
     innerHTML 프로퍼티를 사용한 DOM 조작은 구현이 간단하고 직관적이라는 장점이 있다.
@@ -26,6 +41,10 @@
     그대로 실행될 가능성이 있다. 
     </pre>
 
+    <script>
+       // $area.innerHTML = `<img src='x' onerror = 'alert("메롱~! 악성코드 웩!! ")'>`;
+
+    </script>
   
 
     <pre>
@@ -39,6 +58,14 @@
         <li class="coffee">커피</li>
     </ul>
 
+    <script>
+        const $list = document.getElementById('list');
+
+        $list.innerHTML += "<li class='coke' >콜라 </li>";
+        //위 코드는 아래 코드의 축약 표현으로 
+        //기존 자식 노드를 모두 제거하고 새롭게 자식 노드를 생성하여 DOM에 반영하는 비효율적인 동작을 한다. 
+        //$list.innerHTML = $list.innerHTML + "<li class = 'coke'>콜라</li>"
+    </script>
     
 </body>
 </html>
