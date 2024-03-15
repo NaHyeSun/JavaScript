@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>01_inline style</title>
 </head>
+
 <body>
     <h1>01. inline style</h1>
     <pre>
@@ -16,6 +18,20 @@
     </pre>
     <div style="color: white;">AREA</div>
 
-   
+    <script>
+        const $area = document.querySelector('div');
+
+        console.log($area.style);
+
+        $area.style.width = '100px';
+        $area.style.height = '100px';
+
+        $area.style.backgroundColor = 'lightgray';    //마침표 표기법
+        $area.style['background-color'] = 'red';      //대괄호 표기법
+
+    </script>
+
+
 </body>
+
 </html>
