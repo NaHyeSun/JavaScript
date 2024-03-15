@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -12,6 +13,7 @@
         }
     </style>
 </head>
+
 <body>
     <h1>02. 이벤트 위임</h1>
     <pre>
@@ -27,6 +29,27 @@
         <li>우유</li>
     </ul>
 
-   
+    <script>
+        // 각 li가 클릭 되었을 때 highlight라는 클래스가 없을 경우 부여하고 있을 경우 제거.
+        // li 마다 이벤트 핸들러를 등록할 수도 있지만 상위 요소인 ul에 한번만 이벤트 핸들러를 등록한다.
+        const $drink = document.getElementById('drink');
+
+
+        // ul이 클릭 되었을 때만 아니라, li가 클릭 되었을 때 버블링으로 인해 ul로 이벤트가 전파되며 이벤트 핸들러가 동작
+        $drink.addEventListener('click', e => {
+            //ul 영역 클릭 시에는 동작시키고 싶지 않으므로 li인지 확인.
+            if (e.target.matches('li')) {
+                highlight(e.target);        //li가 클릭되었을 경우 해당 li를 인자로 전달 
+            }
+        });
+
+        //토글효과
+        function highlight(li) {
+            li.classList.toggle('highlight');
+        }
+
+    </script>
+
 </body>
+
 </html>
