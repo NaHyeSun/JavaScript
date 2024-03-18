@@ -18,7 +18,7 @@ console.log(kitty);
 
 /* 프로퍼티 삭제 */
 // delete 연산자를 이용하여 프로퍼티를 삭제할 수 있다. 
-delete kitty.age;;
+delete kitty.age;
 delete kitty['like'];
 // 만약 존재하지 않는 프로퍼티를 삭제한다면 아무런 에러 없이 무시된다. 
 delete kitty.zipsa;

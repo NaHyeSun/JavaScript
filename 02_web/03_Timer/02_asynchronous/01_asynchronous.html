@@ -39,8 +39,8 @@
             console.log('바로 실행하고 싶어요! ');
         };
 
-        sleep(delay, 3000);
-        start();
+        // sleep(delay, 3000);
+        // start();
 
 
     </script>
@@ -55,6 +55,14 @@
 
     setTimeout, setInterval, 이벤트 핸들러, HTTP 요청 등은 비동기 처리 방식으로 동작한다.
     </pre>
+
+    <script>
+        // 타이머 함수 setTimeout은 일정시간이 경과한 이후에 콜백함수 delay를 호출한다.
+        // 타이머 함수 setTimeout은 start 함수를 블로킹하지 않는다.
+        setTimeout(delay, 3000);
+        start();
+
+    </script>
 
 
 
