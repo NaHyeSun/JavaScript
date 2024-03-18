@@ -139,13 +139,13 @@
         $(function () {
             // 입력 양식 관련 이벤트 감지 테스트
             $("#name").focus(function () {
-                console.log('FOCUS!');
+                console.log('FOCUS!');            // focus() : 입력 필드에 포커스가 갈 때
             }).blur(function () {
-                console.log('BLUR!');
+                console.log('BLUR!');             // blur() : 입력 필드에서 포커스가 벗어 날 때
             }).change(function () {
-                console.log('CHANGE!');
+                console.log('CHANGE!');           // change() : 입력 필드 내용이 변경되고 포커스가 벗어날 때 
             }).select(function () {
-                console.log('SELECT!');
+                console.log('SELECT!');           //select() : 입력 필드의 텍스트를 선택할 때 
             });
 
             // focusin, focusout : 해당 요소와 자식 요소가 포커스를
