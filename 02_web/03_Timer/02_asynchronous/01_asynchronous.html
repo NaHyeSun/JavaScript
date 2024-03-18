@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>03_asynchronous</title>
 </head>
+
 <body>
     <h1>01. 비동기</h1>
 
@@ -21,7 +23,29 @@
     단점 : 앞선 태스크가 종료할 때까지 이후 태스크들이 블로킹 
     </pre>
 
-    
+    <script>
+        function sleep(func, delay) {
+            const delayUntil = Date.now() + delay;
+
+            while (Date.now() < delayUntil);
+
+            func();
+        };
+
+        function delay() {
+            console.log('실행 시간을 늦추고 싶어요!! ');
+        };
+        function start() {
+            console.log('바로 실행하고 싶어요! ');
+        };
+
+        sleep(delay, 3000);
+        start();
+
+
+    </script>
+
+
 
     <h3>비동기 처리(asynchronous)</h3>
     <pre>
@@ -32,7 +56,7 @@
     setTimeout, setInterval, 이벤트 핸들러, HTTP 요청 등은 비동기 처리 방식으로 동작한다.
     </pre>
 
-   
+
 
     <h3>태스크 큐(task queue)</h3>
 

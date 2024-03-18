@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>02_prevent select copy</title>
 </head>
+
 <body>
     <h1>02. 선택 막기, 복사 막기</h1>
 
@@ -27,7 +28,22 @@
         행운이 필요한 사람에게 보내 주셔야 합니다. 복사는 안됩니다.
     </div>
 
-   
+    <script>
+        const $span = document.querySelector('span');
+        $span.onmousedown = (e) => e.preventDefault();
+        $span.onmousemove = (e) => e.preventDefault();
+
+        const $div = document.querySelector('div');
+        $div.oncopy = () => {
+            alert('복사 불가능입니다!!');
+            return false;
+
+        }
+
+
+    </script>
+
 
 </body>
+
 </html>
